@@ -28,7 +28,7 @@ while True:
     annotated_frame = results[0].plot()
 
     # 显示
-    cv2.imshow("YOLOv8 Screen Detection", annotated_frame)
+    cv2.imshow("YOLOv8 Screen Detection", cv2.resize(annotated_frame,None,fx=0.5,fy=0.5))
 
     # 按 q 退出
     if cv2.waitKey(1) & 0xFF == ord("q"):
